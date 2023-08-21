@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <canvas id="myChart"></canvas> <script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels:['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+      'September', 'October', 'November','December'],
+      datasets:[{
+        data:[86, 71, 13, 45],
+        label:'Candy',
+        borderColor: 'rgba(120, 120, 255, 1)'
+      },
+        {
+          data:[100, 21, 113, 0],
+          label:'Clothes',
+          borderColor: 'rgba(255, 100, 255,1)'
+        }, {
+        data:[0, 21, 35, 12],
+          label:'Amazon',
+          borderColor: 'rgba(100, 200, 100,1)'
+        }, {
+        data:[4, 53, 76,1],
+          label: 'Movies',
+          borderColor: 'rgba(1, 260, 180,2)'
+        }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+  </script>
+</body>
+</html>

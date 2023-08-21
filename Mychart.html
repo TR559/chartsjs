@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style='width: 300px'>
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data:{
+      labels: ['Soccer', 'football','baseball','volleyball', 'basketball'],
+      datasets:[{
+        label:'# of Votes',
+        data: [11, 3, 1 ,2,3],
+        backgroundColor: [
+          'rgba(0, 255, 132, 0.2)',
+          'rgba(30,139,255,0.2)',
+          'rgba(255,38,0,0.2)',
+          'rgba(255, 128, 0, 0.2)',
+          'rgba(0,255,225,0.2)'
+        ],
+        borderColor:[
+          'rgb(7,7,7)',
+          'rgb(7,7,7)',
+          'rgb(7,7,7)',
+          'rgb(7,7,7)',
+          'rgb(7,7,7)'
+        ],
+        borderWidth:2
+      }]
+    },
+    options: {
+      scales:{
+        y:{
+          beginAtZero: true,
+        },
+        x:{
+          ticks: {
+            stepSize:1
+          }
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+</body>
+</html>
