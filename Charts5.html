@@ -79,9 +79,9 @@
     var myChart = new Chart(ctx,{
         type:'doughnut',
         data:{
-            labels: ['Gold', 'Silver', ],
+            labels: ['Gold'],
             datasets:[{
-                label:'gold vs silver price',
+                label:'gold',
                 data:[705,808,769,792,679,547,534,514,463,485,600,683,679,792,847,953,1288,1331,1521,1841,2352,2209,1635,1648,1437,1525,1656,1605,1873,2162,1952,1970],
                 backgroundColor:[
                     'rgb(255,222,0)',
@@ -90,12 +90,120 @@
             },
 
                 {
-                    data:[7,10,9,10,9,11,9,8,9,8,7,8,10,10,15,19,24,18,22,39,44,40,24,22,18,22,21,19,19,30,24,21],
                     label:'silver',
-                    borderColor: 'rgb(211,202,202)',
+                    datasets:[7,10,9,10,9,11,9,8,9,8,7,8,10,10,15,19,24,18,22,39,44,40,24,22,18,22,21,19,19,30,24,21],
+                    backgroundColor: 'rgb(211,202,202)',
+
                 }, ]
         }
     });
 </script>
+
+<canvas id='chart3'></canvas>
+<script>
+    var cty = document.getElementById('chart3');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data:{
+            datasets:[{
+                label: 'Gold',
+
+                backgroundColor: 'rgba(255, 200, 50, 1)',
+                pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+                pointRadius: 5,
+                data: [
+                    {x:705, y:1993},
+                    {x:808, y:1994},
+                    {x:769, y:1995},
+                    {x:792, y:1996},
+                    {x:679, y:1997},
+                    {x:547, y:1998},
+                    {x:534, y:1999},
+                    {x:514, y:2000},
+                    {x:463, y:2001},
+                    {x:485, y:2002},
+                    {x:600, y:2003},
+                    {x:683, y:2004},
+                    {x:679, y:2005},
+                    {x:792, y:2006},
+                    {x:847, y:2007},
+                    {x:953, y:2008},
+                    {x:1288, y:2009},
+                    {x:1331, y:2010},
+                    {x:1521, y:2011},
+                    {x:1841, y:2012},
+                    {x:2352, y:2013},
+                    {x:2209, y:2014},
+                    {x:1635, y:2015},
+                    {x:1648, y:2016},
+                    {x:1437, y:2027},
+                    {x:1525, y:2028},
+                    {x:1656, y:2029},
+                    {x:1605, y:2020},
+                    {x:1873, y:2021},
+                    {x:2162, y:2022},
+                    {x:1952, y:2023}
+                ]
+            }, {
+                label: 'Silver',
+                backgroundColor: 'rgb(211,202,202)',
+                pointBackgroundColor: 'rgb(211,202,202)',
+                pointRadius: 5,
+                data: [
+                    {x:7, y:1993},
+                    {x:10, y:1994},
+                    {x:9, y:1995},
+                    {x:10, y:1996},
+                    {x:9, y:1997},
+                    {x:11, y:1998},
+                    {x:9, y:1999},
+                    {x:8, y:2000},
+                    {x:9, y:2001},
+                    {x:8, y:2002},
+                    {x:7, y:2003},
+                    {x:8, y:2004},
+                    {x:10, y:2005},
+                    {x:10, y:2006},
+                    {x:15, y:2007},
+                    {x:19, y:2008},
+                    {x:24, y:2009},
+                    {x:18, y:2010},
+                    {x:22, y:2011},
+                    {x:39, y:2012},
+                    {x:44, y:2013},
+                    {x:40, y:2014},
+                    {x:24, y:2015},
+                    {x:22, y:2016},
+                    {x:18, y:2027},
+                    {x:22, y:2028},
+                    {x:21, y:2029},
+                    {x:19, y:2020},
+                    {x:19, y:2021},
+                    {x:30, y:2022},
+                    {x:24, y:2023}
+                ]
+            },],
+        },
+        options:{
+            scales:{
+                xAxis:{
+                    beginAtZero: true
+                },
+                yAxis: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title:{
+                    display:true,
+                    text: 'Gold vs Silver price'
+                }
+            }
+        }
+    });
+
+</script>
+
+
 </body>
 </html>
